@@ -1,0 +1,144 @@
+$card-width: 300px;
+$card-margin-bottom: 12px;
+.product {
+  margin-top: 120px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  .card {
+    display: flex;
+    flex-flow: column nowrap;
+    width: $card-width;
+    justify-content: center;
+    align-items: center;
+    padding: {
+      top: 12px;
+      bottom: 12px;
+    }
+    margin: {
+      right: 10px;
+      bottom: 30px;
+    }
+    background-color: white;
+    .image {
+      position: relative;
+      width: $card-width;
+      height: $card-width;
+    }
+    .ratings {
+      height: 30px;
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      overflow: hidden;
+      margin-bottom: $card-margin-bottom;
+    }
+    .price {
+      text-align: end;
+      margin-bottom: $card-margin-bottom;
+      font-weight: 800;
+    }
+    .description {
+      position: relative;
+      height: 60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      margin-bottom: $card-margin-bottom;
+      padding: 6px;
+      .readmore {
+        position: absolute;
+        bottom: 2px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #ffdc38;
+        opacity: 0.8;
+        transition: all 0.5s ease-in-out 0.01s;
+        z-index: 24;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.2);
+          right: 10px;
+          bottom: 10px;
+        }
+        div {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      .btnContainer {
+        flex: 3;
+        .btn {
+          width: 80%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          height: 34px;
+          background-color: rgb(215, 212, 212);
+          border-radius: 17px;
+          span {
+            text-align: center;
+            width: 100px;
+            height: 34px;
+            border-radius: 17px;
+            background-color: rgb(235, 229, 229);
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+          button {
+            width: 120px;
+            height: 34px;
+            background-color: #ffdc38;
+            border-radius: 17px;
+            border: none;
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+      .fvr {
+        font-size: 35px;
+        position: relative !important;
+        z-index: 23 !important;
+        margin-right: 10%;
+      }
+      .liked {
+        position: relative !important;
+        z-index: 23 !important;
+        color: lawngreen;
+        font-size: 35px;
+        transition: all 0.5s ease-in-out 0.01s;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .product {
+    .card {
+      width: 90% !important;
+    }
+  }
+}

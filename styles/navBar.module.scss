@@ -1,0 +1,130 @@
+.container {
+    position: fixed;
+    top: 0;
+    z-index: 26;
+    width: 100%;
+    .menu{
+      display: none;
+      height: 30px;
+    }
+    .respnav{
+      width: 0 !important;
+      overflow: hidden;
+    }
+    .openMenu{
+      top: -30px;
+      position: relative;
+      width: 90% !important;
+      min-height: 150px;
+      background-color: black;
+      z-index: 60;
+      transition: all 0.5s ease-in-out 0.01s;
+      ul{
+        padding-top: 20px;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 30px;
+        li{
+          text-decoration: none;
+          color: grey;
+          &:hover::after{
+            content: "";
+            display: block;
+            background-color: lawngreen;
+            height: 1px;
+            width: inherit;
+          }
+        }
+      }
+      .cancel{
+        color: white;
+        position: absolute;
+        right: 10px;
+      }
+    }
+    .modal{
+      width: 0;
+      overflow: hidden;
+      height: 0;
+    }
+    .openModal{
+      width: 90%;
+      min-height: 300px;
+      max-height: 80vh;
+      overflow-y: scroll;
+      background-color: white;
+      position: absolute;
+      top: 100px;
+      right: 0;
+      transition: width 0.5s ease-in-out 0.01s;
+      // z-index: 30 !important;
+      table{
+        border: 1px solid #ddd;
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        td,th{
+        border: 1px solid #ddd;
+        padding: 15px;
+        }
+      }
+    }
+  .main {
+    opacity: 0.6;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: grey;
+    height: 100px;
+    .storeName {
+      flex: 3;
+      color: red;
+    }
+    .shopicon{
+      flex:1;
+    }
+    ul {
+      flex: 3;
+      list-style: none;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      li {
+        text-decoration: none;
+        &:hover::after{
+          content: "";
+          display: block;
+          background-color: lawngreen;
+          height: 1px;
+          width: inherit;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .container{
+    .menu{
+      display: block;
+    }
+    .main {
+      height: 50px;
+      ul{
+        display: none;
+      }
+    }
+    .openModal{
+      top: 50px;
+      width: 95%;
+    }
+  }
+}
+
+

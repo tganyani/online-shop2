@@ -1,0 +1,70 @@
+.product {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 120px;
+  min-height: 90vh;
+  .card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    .header {
+      text-align: center;
+      h4 {
+        margin-bottom: 30px;
+      }
+    }
+    .image {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      .imgcontainer {
+        width: 600px;
+        height: 700px;
+        position: relative;
+        #im {
+          &:hover {
+            box-shadow: 0 0 23px grey;
+          }
+        }
+      }
+    }
+    .rating {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .desc {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      margin-bottom: 50px;
+      margin-top: 20px;
+      p {
+        width: 600px;
+        color: grey;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .product {
+    .card {
+      .image {
+        .imgcontainer {
+          width: 90% !important;
+          height: 600px;
+        }
+      }
+      .desc {
+        p {
+          width: 90% !important;
+        }
+      }
+    }
+  }
+}
