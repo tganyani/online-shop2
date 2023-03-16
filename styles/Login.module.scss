@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  .sub {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    row-gap: 30px;
+    border: 1px solid rgb(203, 193, 193) ;
+    padding: 30px;
+    &:hover{
+        border-color: grey;
+    }
+  }
+}

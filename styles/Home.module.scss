@@ -1,0 +1,73 @@
+.container {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-around;
+  .searchBar {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: 10px;
+    .inputs {
+      row-gap: 10px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      .inputText{
+      width: 100%;
+      }
+    }
+  }
+  .jobs {
+    flex: 2;
+    height: 80vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    .header {
+    }
+    .jobContainer {
+      .jobCard {
+        margin-bottom: 30px;
+        .cardHeader {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-around;
+          h4 {
+            flex: 2;
+          }
+          .headerIcons {
+            flex: 1;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            .applicants,
+            .views {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-around;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 700px) {
+  .container{
+    flex-flow: column nowrap;
+    .inputs{
+      flex-flow: row wrap !important;
+      column-gap: 10px;
+      .inputText{
+        width: 45% !important;
+        }
+    }
+  }
+}

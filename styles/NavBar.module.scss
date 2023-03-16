@@ -1,0 +1,138 @@
+.main{
+  position: relative;
+  .container {
+    background-color: black;
+    opacity: 0.6;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    .logo {
+      color: lawngreen;
+      font-weight: 900;
+      font-size: 1.2rem;
+      flex: 1;
+    }
+    .menu{
+      color: white;
+      display: none;
+    }
+    .navLists {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      flex: 6;
+      .list {
+        flex: 5;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        list-style: none;
+        li {
+          color: white ;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-around;
+          align-items: center;
+          p {
+            flex: 1;
+            &:hover::after {
+              content: "";
+              display: block;
+              height: 0.5px;
+              width: inherit;
+              background-color: lawngreen !important;
+            }
+          }
+        }
+      }
+      .account {
+        color: white;
+        position: relative;
+        flex: 1;
+        .dropDown {
+          width: 50px;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-around;
+          align-items: center;
+          #dropDownIcon {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+  .closeMenu{
+    display: none;
+  }
+  .toggleMenu{
+    background-color: black;
+    opacity: 0.6;
+    display: flex ;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 10px;
+    width: 90%;
+    .listToggle {
+      display: flex !important;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      width: 100%;
+      row-gap: 10px;
+      li {
+        color: white ;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between !important;
+        align-items: center;
+        width: 150px;
+        p {
+          flex: 1;
+          &:hover::after {
+            content: "";
+            display: block;
+            height: 0.5px;
+            width: inherit;
+            background-color: lawngreen !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+  .main{
+    .container{
+      height: 50px;
+      align-items: center;
+      .menu{
+        display: block;
+      }
+      .navLists{
+        flex: 1;
+        .account{
+          p{
+            position: absolute;
+            right: 60px;
+            top: 0 !important;
+          }
+          .dropDown{
+            width: 100%;
+            justify-content: end;
+          }
+        }
+        .list{
+          display: none !important;
+        }
+      }
+  }
+  }
+}

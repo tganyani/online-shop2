@@ -1,0 +1,14 @@
+$backgroundColor1:rgb(246, 246, 246);
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 20px;
+  padding: 30px;
+  .vaccancy {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10px;
+    padding: 10px;
+    background-color: $backgroundColor1;
+  }
+}

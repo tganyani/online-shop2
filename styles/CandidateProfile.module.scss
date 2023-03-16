@@ -1,0 +1,253 @@
+$backgroundColor1: rgb(228, 226, 226);
+$backgroundColor2: #f8f4f4;
+$padding1: 20px;
+$shadow: rgb(121, 116, 116);
+$rowGap1:8px;
+$columGap1:10px;
+
+.container {
+  background-color: $backgroundColor1;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 30px;
+  padding: 20px;
+  .topNav {
+    background-color: #fff;
+    padding: $padding1;
+    box-shadow: 0 0 2px #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    .name {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      .sub{
+        display: flex;
+        flex-flow: column nowrap;
+      }
+    }
+    .image{
+      .enlarge{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        right: 10px;
+        z-index: 4;
+        border-radius: 0;
+      }
+      img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+      }
+    }
+    &:hover {
+      box-shadow: 0 0 6px $shadow;
+    }
+  }
+  .about {
+    background-color: #fff;
+    padding: $padding1;
+    box-shadow: 0 0 2px #fff;
+    .header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    &:hover {
+      box-shadow: 0 0 6px $shadow;
+    }
+  }
+  .edu {
+    background-color: #fff;
+    padding: $padding1;
+    box-shadow: 0 0 2px #fff;
+    .header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .sub {
+      display: flex;
+      flex-flow: column nowrap;
+      row-gap: $rowGap1;
+      .education {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: $columGap1;
+        width: 80%;
+        background-color: $backgroundColor2;
+        padding: 10px;
+        border-radius: 6px;
+      }
+    }
+    &:hover {
+      box-shadow: 0 0 6px $shadow;
+    }
+  }
+  .prevPos {
+    background-color: #fff;
+    padding: $padding1;
+    box-shadow: 0 0 2px #fff;
+    &:hover {
+      box-shadow: 0 0 6px $shadow;
+    }
+    .header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .sub {
+      display: flex;
+      flex-flow: row wrap;
+    //   justify-content: space-around;
+      row-gap: $rowGap1;
+      column-gap: $columGap1;
+      .inner {
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: $backgroundColor2;
+        padding: $padding1;
+        max-width: 40%;
+        width: fit-content;
+        height: fit-content;
+        .prev {
+         overflow-wrap: break-word;
+          p {
+            flex: 1;
+          align-items: center;
+
+          }
+        }
+      }
+    }
+  }
+  .skills {
+    background-color: #fff;
+    padding: $padding1;
+    box-shadow: 0 0 2px #fff;
+    &:hover {
+      box-shadow: 0 0 6px $shadow;
+    }
+    .header {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+    .sub {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      row-gap: 20px;
+      column-gap: $columGap1;
+      .skill {
+        padding: 10px;
+        position: relative;
+        height: fit-content;
+        width: fit-content;
+        background-color: $backgroundColor1;
+        border-radius: 12px;
+        overflow-wrap: break-word;
+        max-width: 40%;
+        span {
+          position: absolute;
+          top: -15px;
+          right: -15px;
+          background-color: lawngreen;
+          color: white;
+          width: 24px;
+          height: 24px;
+          border-radius: 14px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .projects {
+    background-color: #fff;
+    padding: $padding1;
+    box-shadow: 0 0 2px #fff;
+    &:hover {
+      box-shadow: 0 0 6px $shadow;
+    }
+    .header {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+    .sub {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      column-gap: $columGap1;
+      .inner{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        column-gap: $columGap1;
+        .project {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 30px;
+            background-color: $backgroundColor2;
+            padding: $padding1;
+          }
+      }
+      
+    }
+  }
+  .contacts {
+    background-color: #fff;
+    padding: $padding1;
+    box-shadow: 0 0 2px #fff;
+    &:hover {
+      box-shadow: 0 0 6px $shadow;
+    }
+    .sub {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      .contact {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .container{
+      .topNav{
+          .image{
+              .enlarge{
+                  width: 70vw !important;
+                  height: 70vw !important;
+                }
+          }
+      }
+  }
+}
+
+

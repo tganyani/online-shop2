@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    .chatList {
+      width: 200px;
+      display: flex;
+      flex-flow: column nowrap;
+      height:calc(100vh - 88px);
+      overflow-y: scroll;
+      overflow-x: hidden;
+      background-color: rgb(242, 242, 242);
+      .List {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        text-decoration: none;
+        background-color: rgb(245, 245, 245);
+        padding: 5px;
+        overflow: hidden;
+        min-height: 30px;
+        &:hover {
+          box-shadow: 0 0 1px rgb(164, 164, 164);
+        }
+        .text{
+          text-overflow: ellipsis;
+          width: 150px;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .container{
+      .chatList{
+        display: none !important;
+      }
+      .left{
+        width: 100% !important;
+      }
+    }
+  }

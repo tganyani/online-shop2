@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  .form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    width: 100%;
+    // span{
+    //   text-align: center;
+    // }
+    .errors{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      column-gap: 10px;
+      width: 50%;
+    }
+    .companyName,
+    .companyAddress,
+    .workConditions,.submitBtn {
+      width: 50%;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      column-gap: 20px;
+      .text {
+        width: 50%;
+      }
+    }
+    .title,
+    .description {
+      width: 50%;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      column-gap: 20px;
+      .text {
+        width: 100%;
+      }
+    }
+    .skills {
+      width: 50%;
+      display: flex;
+      flex-flow: column nowrap;
+      .inner {
+        background-color: azure;
+        min-height: 50px;
+        display: flex;
+        column-gap: 8px;
+        row-gap: 12px;
+        flex-flow: row wrap;
+        padding: 12px;
+        .skill {
+          padding: 5px;
+          background-color: lawngreen;
+          color: white;
+          height: fit-content;
+          border-radius: 5px;
+          position: relative;
+          .clear {
+            position: absolute;
+            top: -10px;
+            right: -5px;
+            color: tomato;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .bottom {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        column-gap: 20px;
+        .text {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1100px) {
+  .container{
+    .companyName,
+    .companyAddress,
+    .workConditions,
+    .title,
+    .description,
+    .skills,.submitBtn
+    {
+      width: 70% !important;
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .container{
+    padding: 5px;
+    .companyName,
+    .companyAddress,
+    .workConditions,
+    .title,
+    .description,
+    .skills,.submitBtn
+    {
+      width: 98% !important;
+    }
+  }
+}

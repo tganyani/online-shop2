@@ -1,0 +1,33 @@
+.container{
+    padding: 12px;
+    .job{
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 20px;
+        .header{
+            .company{
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+            }
+        }
+        .info{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            column-gap: 60px;
+            .sub{
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                column-gap: 60px;
+            }
+        }
+        .footer{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            column-gap: 70px;
+        }
+    }
+}

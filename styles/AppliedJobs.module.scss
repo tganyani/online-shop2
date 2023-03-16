@@ -1,0 +1,11 @@
+.contained{
+    padding: 30px;
+    display:  flex;
+    flex-flow: column nowrap;
+    row-gap: 20px;
+    .job{
+        display:  flex;
+     flex-flow: column nowrap;
+     row-gap: 8px;
+    }
+}

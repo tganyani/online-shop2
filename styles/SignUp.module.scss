@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    .sub {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      row-gap: 20px;
+      border: 1px solid rgb(203, 193, 193) ;
+      padding: 30px;
+      &:hover{
+          border-color: grey;
+      }
+    }
+  }
+  
